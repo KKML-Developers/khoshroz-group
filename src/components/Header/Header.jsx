@@ -24,13 +24,14 @@ const Header = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <nav className="navbar navbar-expand-lg">
-              <div className="header__logo">
+            <nav className="navbar navbar-expand-md">
+              <div className="header__logo d-md-block d-flex justify-content-between">
                 <NavLink exact to="/" className="navbar-brand d-block">
                   <img src={khoshrozGroupLogo} alt="Khoshroz Group" className="img-fluid" />
                 </NavLink>
                 <button className="navbar-toggler" type="button" onClick={handleClick}>
                   {click ? (
+
                     <span className="icon">
                       <IoClose />
                     </span>
@@ -41,7 +42,7 @@ const Header = () => {
                   )}
                 </button>
               </div>
-              <div className={click ? 'collapse navbar-collapse' : 'collapse navbar-collapse show'} >
+              <div className={click ? 'collapse navbar-collapse show' : 'collapse navbar-collapse'} >
                 <ul className="navbar-nav">
                   {headerData.map((item) => (
                     <li className="nav-item" key={item.id}>
@@ -59,13 +60,7 @@ const Header = () => {
                 </ul>
 
               </div>
-              <ul className="header__social">
-                {social.map((item) => (
-                  <li key={item.id}>
-                    <a href={item.url}>{item.icon}</a>
-                  </li>
-                ))}
-              </ul>
+
             </nav>
           </div>
         </div>
