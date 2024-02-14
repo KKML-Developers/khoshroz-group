@@ -1,10 +1,11 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
 import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
+import HelmetComponent from './components/HelmetComponent'; // Import the HelmetComponent
 
 const Home = lazy(() => import('./components/Home/Home'));
 const Companies = lazy(() => import('./components/Companies/Companies'));
@@ -28,19 +29,19 @@ function App() {
           </main>
           <Footer />
         </Router>
-        <Helmet>
-          <title>Your Page Title</title>
-          <meta name="description" content="Description of your page goes here" />
-          <meta name="keywords" content="your, keywords, here" />
-          <meta name="author" content="Your Name" />
-          <meta property="og:title" content="Your Page Title" />
-          <meta property="og:description" content="Description of your page goes here" />
-          <meta property="og:url" content="https://www.yourwebsite.com" />
-          <meta property="og:image" content="https://www.yourwebsite.com/your-image.jpg" />
-          <meta name="twitter:title" content="Your Page Title" />
-          <meta name="twitter:description" content="Description of your page goes here" />
-          <meta name="twitter:image" content="https://www.yourwebsite.com/your-image.jpg" />
-        </Helmet>
+        <HelmetComponent
+          title="Your Page Title"
+          description="Description of your page goes here"
+          keywords="your, keywords, here"
+          author="Your Name"
+          ogTitle="Your Page Title"
+          ogDescription="Description of your page goes here"
+          ogUrl="https://www.yourwebsite.com"
+          ogImage="https://www.yourwebsite.com/your-image.jpg"
+          twitterTitle="Your Page Title"
+          twitterDescription="Description of your page goes here"
+          twitterImage="https://www.yourwebsite.com/your-image.jpg"
+        />
       </>
     </HelmetProvider>
   );
