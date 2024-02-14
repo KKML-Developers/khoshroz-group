@@ -1,9 +1,10 @@
-import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaFacebookSquare, FaLinkedinIn, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import "./footer.scss";
 
 const Footer = () => {
     return (
-        <footer>
-            <div className="container my-5">
+        <footer className="footer">
+            <div className="container my-4 py-5">
                 <div className="row">
                     <div className="col-md-4">
                         <div className="footer-content">
@@ -67,6 +68,27 @@ const Footer = () => {
                                     <p>
                                         <FaEnvelope /> <span>ndcl.kkml@gmail.com</span>
                                     </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="footer-copyright py-3">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6 copyright-text">
+                            Khoshroz Group © 2024 / All Rights Reserved.
+                        </div>
+                        <div className="col-md-6 social-links-wrap">
+                            <ul className="social-links">
+                                <li>
+                                    <a target="/_blank" title="Facebook" href="https://www.facebook.com/KhoshrozCorporateOffice/"> <FaFacebookSquare />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="/_blank" title="Linkedin" href="https://www.linkedin.com/company/khoshroz-kitab-mahal/"> <FaLinkedinIn />
+                                    </a>
                                 </li>
                             </ul>
                         </div>
