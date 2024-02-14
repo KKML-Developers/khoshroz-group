@@ -1,7 +1,9 @@
 @import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
 .header {
     background-color: lighten($color: $primary, $amount: 63);
-    .navbar-brand {
-        width: 220px;
+    .navbar {
+        &-brand {
+            width: 220px;
+        }
     }
 }
