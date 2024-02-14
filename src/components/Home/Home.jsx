@@ -1,9 +1,15 @@
 
 const Home = () => {
     return (
-        <div>
-            I am Home
-        </div>
+        <section className="home">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-12">
+                        <h1>This is home component</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 };
 
