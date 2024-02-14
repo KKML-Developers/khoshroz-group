@@ -2,8 +2,60 @@
 .header {
     background-color: lighten($color: $primary, $amount: 63);
     .navbar {
+        @include flex(row, space-between, center);
+        @include tablet {
+            display: block;
+        }
         &-brand {
             width: 220px;
+        }
+        &-collapse {
+            flex-grow: inherit;
+        }
+        &-nav {
+            li {
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                    @include tablet {
+                        border-bottom: 1px solid $primaryText;
+                    }
+                }
+                a {
+                    position: relative;
+                    color: $primaryText;
+                    transition: 0.3s ease-in-out;
+                    @include tablet {
+                        display: inline-block;
+                        padding: 10px 0;
+                        line-height: 1;
+                    }
+                    &::before {
+                        @extend %before_after;
+                        width: 0;
+                        height: 2px;
+                        border-radius: 50px;
+                        overflow: hidden;
+                        background-color: $secondary;
+                        bottom: -5px;
+                        left: 0;
+                        transition: 0.3s ease-in-out;
+                        z-index: 1;
+                        @include tablet {
+                            bottom: -2px;
+                            height: 4px;
+                        }
+                    }
+                    &:hover {
+                        color: $secondary;
+                        &::before {
+                            width: 80%;
+                            @include tablet {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
