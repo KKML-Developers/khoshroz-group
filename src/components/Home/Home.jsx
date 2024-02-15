@@ -1,3 +1,4 @@
+import HomeAbout from "../HomeAbout/HomeAbout";
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <HomeAbout />
         </section>
     );
 };
