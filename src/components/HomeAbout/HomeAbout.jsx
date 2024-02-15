@@ -24,7 +24,9 @@ const HomeAbout = () => {
               </NavLink>
           </div>
         </div>
-        <div className="col-md-6">video</div>
+        <div className="col-md-6">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6dxRSynuNOI?si=HoHgLuhtaxmdRfUD" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   );
