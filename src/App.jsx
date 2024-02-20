@@ -30,17 +30,17 @@ function App() {
           <Footer />
         </Router>
         <HelmetComponent
-          title="Your Page Title"
+          title="Khoshroz Group of Company"
           description="Description of your page goes here"
-          keywords="your, keywords, here"
-          author="Your Name"
-          ogTitle="Your Page Title"
+          keywords="Khoshroz, Khoshroz Group, Publication, Bangladesh Business, Business Tycoon"
+          author="Khoshroz Group Developers"
+          ogTitle="Khoshroz Group of Company"
           ogDescription="Description of your page goes here"
-          ogUrl="https://www.yourwebsite.com"
-          ogImage="https://www.yourwebsite.com/your-image.jpg"
-          twitterTitle="Your Page Title"
+          ogUrl="https://www.khoshrozltd.com"
+          ogImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1706095346/logos/b1z8dxf7cvrkqugkr5io.png"
+          twitterTitle="Khoshroz Group of Company"
           twitterDescription="Description of your page goes here"
-          twitterImage="https://www.yourwebsite.com/your-image.jpg"
+          twitterImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1706095346/logos/b1z8dxf7cvrkqugkr5io.png"
         />
       </>
     </HelmetProvider>

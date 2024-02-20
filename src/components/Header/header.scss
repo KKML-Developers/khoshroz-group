@@ -54,6 +54,15 @@
                             }
                         }
                     }
+                    &.active {
+                        color: $secondary;
+                        &::before {
+                            width: 80%;
+                            @include tablet {
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { FaBars, FaFacebookF, FaLinkedin } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import "./header.scss";
 import { useState } from "react";
-import khoshrozGroupLogo from "../../assets/img/khoshroz_group_logo.png";
 const Header = () => {
   const [click, setClick] = useState(false);
 
@@ -14,10 +13,7 @@ const Header = () => {
     { id: 2, label: "About", to: "/about", exact: true },
     { id: 3, label: "Companies", to: "/companies", exact: true },
   ];
-  const social = [
-    { id: 1, icon: <FaFacebookF />, url: "/" },
-    { id: 1, icon: <FaLinkedin />, url: "/" },
-  ];
+
 
   return (
     <header className="header">
@@ -26,12 +22,11 @@ const Header = () => {
           <div className="col-lg-12">
             <nav className="navbar navbar-expand-md">
               <div className="header__logo d-md-block d-flex justify-content-between">
-                <NavLink exact to="/" className="navbar-brand d-block">
-                  <img src={khoshrozGroupLogo} alt="Khoshroz Group" className="img-fluid" />
+                <NavLink to="/" className="navbar-brand d-block">
+                  <img src="https://res.cloudinary.com/dfaw271y6/image/upload/v1706095346/logos/b1z8dxf7cvrkqugkr5io.png" alt="Khoshroz Group" className="img-fluid" />
                 </NavLink>
                 <button className="navbar-toggler" type="button" onClick={handleClick}>
                   {click ? (
-
                     <span className="icon">
                       <IoClose />
                     </span>
@@ -47,9 +42,7 @@ const Header = () => {
                   {headerData.map((item) => (
                     <li className="nav-item" key={item.id}>
                       <NavLink
-                        exact={item.exact}
                         to={item.to}
-                        activeClassName="active"
                         className="nav-links"
                         onClick={handleClick}
                       >
@@ -58,9 +51,7 @@ const Header = () => {
                     </li>
                   ))}
                 </ul>
-
               </div>
-
             </nav>
           </div>
         </div>
