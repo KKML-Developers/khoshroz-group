@@ -1,0 +1,12 @@
+@import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
+.banner {
+    height: 300px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @include tablet {
+        height: 250px;
+    }
+}

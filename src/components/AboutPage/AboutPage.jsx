@@ -1,7 +1,8 @@
+import Banner from "../Banner/Banner";
 import HelmetComponent from "../HelmetComponent";
+import Title from "../Title/Title";
 import "./aboutPage.scss";
 
-import bannerImage from '../../assets/img/about_bg.jpg'
 const AboutPage = () => {
     const aboutBadge = "In the 21st century, we pledge to work to give greater vitality to our social commitment to the country and its people. Magura Group is poised to face the future with a distinct sense of optimism.";
     const aboutDesc = [
@@ -23,16 +24,13 @@ const AboutPage = () => {
                 twitterImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1706095346/logos/b1z8dxf7cvrkqugkr5io.png"
             />
             <section className="aboutPage">
-                <div className="aboutPage__banner">
-                    <img src={bannerImage} alt="image" />
-                </div>
+                <Banner />
+
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="aboutPage__content">
-                                <h2 className="aboutPage__title">
-                                    Corporate <span>Profile</span>
-                                </h2>
+                                <Title titleOuter={'Corporate'} titleInner={'Profile'} />
                                 <div className="aboutPage__message">
                                     <p>{aboutBadge}</p>
                                 </div>
