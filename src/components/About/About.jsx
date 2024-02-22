@@ -9,21 +9,21 @@ const About = () => {
   return (
     <section className="about">
       <div className="container">
-        <div className="row align-items-stretch">
-          <div className="col-md-6">
+        <div className="row align-items-stretch flex-lg-row flex-column-reverse">
+          <div className="col-lg-6">
             <div className="about__content">
               <h2>{title}</h2>
               <div className="about__content--desc">
                 {description.map((item, index) => (
                   <p key={index}>{item}</p>
                 ))}
-                <NavLink to="/about" className="primary__btn">
+                <NavLink to="/about" className="primary__btn mt-3">
                   Read More
                 </NavLink>
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <div className="about__video h-100">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-qoaQgZF0E8?si=zrTxeF8IT7R3QXRl" title="YouTube video player" border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>

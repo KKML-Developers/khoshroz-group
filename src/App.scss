@@ -1,10 +1,19 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
+@import "./assets/scss/variables", "./assets/scss/reset", "./assets/scss/common", "./assets/scss/mixins";
 
 * {
   margin: 0;
   padding: 0;
 }
-
+html {
+  font-size: 16px;
+  @include small-desktop {
+    font-size: 14px;
+  }
+  @include mobile {
+    font-size: 12px;
+  }
+}
 body {
   background-color: #ffffff;
   font-family: "Poppins", sans-serif;

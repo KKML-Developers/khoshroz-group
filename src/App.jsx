@@ -1,25 +1,35 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
-import HelmetComponent from './components/HelmetComponent'; // Import the HelmetComponent
+import HelmetComponent from './components/HelmetComponent';
 
 const Home = lazy(() => import('./components/Home/Home'));
 const Companies = lazy(() => import('./components/Companies/Companies'));
 const Speech = lazy(() => import('./components/Speech/Speech'));
 const AboutPage = lazy(() => import('./components/AboutPage/AboutPage'));
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
-
     <HelmetProvider>
       <>
         <Router>
           <Header />
           <main>
+            <ScrollToTop />
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
                 <Route path="/" element={<Home />} />
