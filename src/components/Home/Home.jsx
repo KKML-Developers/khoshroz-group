@@ -1,11 +1,11 @@
 import Hero from "../Hero/Hero";
-import HomeAbout from "../HomeAbout/HomeAbout";
+import About from "../About/About";
 
 const Home = () => {
     return (
         <section className="home">
             <Hero />
-            <HomeAbout />
+            <About />
         </section>
     );
 };

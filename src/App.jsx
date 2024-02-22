@@ -9,10 +9,12 @@ import HelmetComponent from './components/HelmetComponent'; // Import the Helmet
 
 const Home = lazy(() => import('./components/Home/Home'));
 const Companies = lazy(() => import('./components/Companies/Companies'));
-const About = lazy(() => import('./components/About/About'));
+const Speech = lazy(() => import('./components/Speech/Speech'));
+const AboutPage = lazy(() => import('./components/AboutPage/AboutPage'));
 
 function App() {
   return (
+
     <HelmetProvider>
       <>
         <Router>
@@ -21,8 +23,9 @@ function App() {
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/speech" element={<Speech />} />
                 <Route path="/companies" element={<Companies />} />
+                <Route path="/about" element={<AboutPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
