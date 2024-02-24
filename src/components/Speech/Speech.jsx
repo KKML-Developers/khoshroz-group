@@ -6,7 +6,7 @@ const Speech = () => {
     return (
         <section className="speech">
             <Banner />
-            <div className="container">
+            <div className="container py-5">
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="speech__title text-center">
@@ -15,8 +15,10 @@ const Speech = () => {
 
                         <div className="speech__content">
                             <figure>
-                                <img src="https://res.cloudinary.com/dfaw271y6/image/upload/v1708241872/Founder_sir1_kcly2d.jpg" alt="" />
-                                <figcaption>Honorable Chairman</figcaption>
+                                <img src="https://res.cloudinary.com/dfaw271y6/image/upload/v1708749510/Founder_sir1_kcly2d_efc727.jpg" alt="" />
+                                <figcaption>
+                                    <a href="https://mohiuddinahahmad.com/" target="/_blank">Mr. Mohiuddin Ahmed</a>
+                                </figcaption>
                             </figure>
                             <div className="speech__content--description">
                                 {description.map((item) => (

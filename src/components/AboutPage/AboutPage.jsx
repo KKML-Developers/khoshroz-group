@@ -26,7 +26,7 @@ const AboutPage = () => {
             <section className="aboutPage">
                 <Banner />
 
-                <div className="container">
+                <div className="container py-5">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="aboutPage__content">

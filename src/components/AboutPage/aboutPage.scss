@@ -2,7 +2,6 @@
 .aboutPage {
     &__content {
         color: $primaryText;
-        padding: 40px 0;
         text-align: center;
     }
 
@@ -23,8 +22,6 @@
         &::first-letter {
             initial-letter: 3;
         }
-        p {
-            font-size: 1.4rem;
-        }
+        @extend %descriptionCommon;
     }
 }
