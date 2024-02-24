@@ -4,11 +4,11 @@
     background-color: $primaryText;
     color: lighten($color: $primary, $amount: 63);
 
-    &-content {
+    &__content {
         h4 {
-            font-size: 2.3rem;
+            font-size: $sub-title-heading;
             font-weight: 700;
-            margin: 10px 0;
+            margin-bottom: 1rem;
         }
         p {
             font-size: 1.1rem;

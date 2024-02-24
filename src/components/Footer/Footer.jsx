@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="container py-5">
                 <div className="row">
                     <div className="col-md-4">
-                        <div className="footer-content">
+                        <div className="footer__content">
                             <h4>Corporate Office</h4>
                             <ul className="contact">
                                 <li>
@@ -29,7 +29,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <div className="footer-content">
+                        <div className="footer__content">
                             <h4>Factory Office</h4>
                             <ul className="contact">
                                 <li>
@@ -51,7 +51,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <div className="footer-content">
+                        <div className="footer__content">
                             <h4>Register Office</h4>
                             <ul className="contact">
                                 <li>
