@@ -21,10 +21,10 @@
             @extend %before_after;
             top: 0;
             right: 0;
-            background-color: rgba($color: $secondary, $alpha: 0.3);
+            background-color: rgba($color: $secondary, $alpha: 0.12);
             height: 100%;
             width: 0;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0, 0.23, 0.71, 0.94);
             z-index: -1;
         }
         &:hover {
