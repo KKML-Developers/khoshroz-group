@@ -5,6 +5,7 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
+import Loading from './components/Loading/Loading';
 import HelmetComponent from './components/HelmetComponent';
 
 const Home = lazy(() => import('./components/Home/Home'));
@@ -30,7 +31,7 @@ function App() {
           <Header />
           <main>
             <ScrollToTop />
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/speech" element={<Speech />} />
