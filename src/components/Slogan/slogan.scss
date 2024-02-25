@@ -1,0 +1,54 @@
+@import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
+.slogan {
+    .lineDot {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        height: 65px;
+        &::before {
+            @extend %before_after;
+            bottom: 0;
+            height: 100%;
+            width: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $secondary;
+        }
+        &::after {
+            @extend %before_after;
+            bottom: -2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            background-color: $secondary;
+        }
+    }
+    &__title {
+        margin: 0;
+        padding-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    &__inner {
+        padding: 5rem 1rem;
+        border-radius: 5px;
+        background-color: rgba($color: $primary, $alpha: 0.05);
+    }
+    &__single {
+        &:last-child {
+            .lineDot {
+                display: none;
+            }
+        }
+        h4 {
+            margin-bottom: 0;
+            padding: 1rem 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+}

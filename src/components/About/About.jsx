@@ -7,7 +7,7 @@ const About = () => {
     'While diversifying and expanding its capacity, has no doubt been lucrative moves for the Magura Group, the management has much more in mind.', 'Magura Group has always held on to the philosophy of doing business that will benefit people. It has been more than 25 years of exploration and hardworking, the Group has become a Multilateral Enterprise with its business covering different aspects including food, cloth, housing, education and medicare.'
   ]
   return (
-    <section className="about">
+    <section className="about py-5">
       <div className="container">
         <div className="row align-items-stretch flex-lg-row flex-column-reverse">
           <div className="col-lg-6">

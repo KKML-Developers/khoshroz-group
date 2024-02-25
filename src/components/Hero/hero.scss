@@ -1,7 +1,7 @@
 @import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
 .home {
     &__swiper {
-        height: calc(100vh - 160px);
+        height: 400px;
         position: relative;
         z-index: 1;
         img {

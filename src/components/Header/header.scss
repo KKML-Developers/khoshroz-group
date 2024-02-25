@@ -1,6 +1,7 @@
 @import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
 .header {
-    background-color: lighten($color: $primary, $amount: 63);
+    // background-color: lighten($color: $primary, $amount: 63);
+    background-color: #fff;
     transition: 0.3s;
     top: -20px;
     &.sticky {
