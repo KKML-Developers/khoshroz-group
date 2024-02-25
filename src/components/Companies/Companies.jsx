@@ -29,22 +29,22 @@ const Companies = () => {
             "text": "Jatiya Mudran Limited"
         },
         {
-            "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1708175137/logos/mg-icon_du9ik7.png",
-            "alt": "Magura group Limited",
-            "url": "https://www.maguragroup.com.bd/",
-            "text": "Magura Group Limited"
+            "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1706094599/icons/fycwtgnwwvvhe2hbxfc7.png",
+            "alt": "Magura Agriculture Park Limited",
+            "url": "https://maguraagriculture.com/",
+            "text": "Magura Agriculture Park Limited"
         },
         {
-            "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1708175137/logos/ppp-icon_yekkaj.png",
-            "alt": "Paper processing and packaging limited",
-            "url": "https://www.pppl.com.bd/",
-            "text": "Paper processing and packaging limited"
+            "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1706007093/icons/e-stylze_kqda99.png",
+            "alt": "E-Stylze fashion e-commerce",
+            "url": "https://www.estylzefashion.com/",
+            "text": "E-stylze Fashion Limited"
         },
         {
-            "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1708175137/logos/monospool-icon_shinij.png",
-            "alt": "Bangladesh monospool paper mfg. co. LTD.",
-            "url": "https://www.mpmc.com.bd/",
-            "text": "Bangladesh monospool paper mfg. co. LTD."
+            "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1706007093/icons/DIL_vf8tcz.png",
+            "alt": "Dream International Limited",
+            "url": "https://www.dreaminternationallimited.com/",
+            "text": "Dream International Limited"
         }
     ]
     return (
