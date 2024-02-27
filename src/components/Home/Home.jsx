@@ -2,6 +2,8 @@ import Hero from "../Hero/Hero";
 import About from "../About/About";
 import Slogan from "../Slogan/Slogan";
 import HelmetComponent from "../HelmetComponent";
+import Title from "../Title/Title";
+import Brands from "../Brands/Brands";
 
 const Home = () => {
     return (
@@ -21,6 +23,14 @@ const Home = () => {
             />
             <Hero />
             <Slogan />
+            <div className="container brands text-center mb-4">
+                <div className="row justify-content-center ">
+                    <div className="col-lg-12">
+                        <Title titleOuter={'Our'} titleInner={'Companies'} />
+                    </div>
+                    <Brands />
+                </div>
+            </div>
             <About />
         </section>
     );
