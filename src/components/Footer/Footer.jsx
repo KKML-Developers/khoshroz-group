@@ -59,11 +59,11 @@ const Footer = () => {
             </div>
             <div className="footer-copyright py-3">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-6 copyright-text">
+                    <div className="row align-items-center">
+                        <div className="col-md-6 copyright-text col-9">
                             <p className="m-0">Khoshroz Group &copy; 2024 / All Rights Reserved.</p>
                         </div>
-                        <div className="col-md-6 social-links-wrap">
+                        <div className="col-md-6 social-links-wrap col-3">
                             <ul className="social-links">
                                 <li>
                                     <a target="/_blank" title="Facebook" href="https://www.facebook.com/KhoshrozCorporateOffice/"> <FaFacebookSquare />

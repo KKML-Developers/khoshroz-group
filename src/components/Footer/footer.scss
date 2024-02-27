@@ -5,6 +5,9 @@
     color: lighten($color: $primary, $amount: 63);
 
     &__content {
+        @include tablet {
+            margin-bottom: 1.5rem;
+        }
         h4 {
             font-size: $sub-title-heading;
             font-weight: 700;
