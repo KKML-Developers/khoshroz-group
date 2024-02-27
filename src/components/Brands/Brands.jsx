@@ -4,7 +4,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import './brands.scss'
-const Brands = () => {
+import Title from '../Title/Title';
+const Brands = ({ title, brandList, description }) => {
     const ref = useRef([]);
     ref.current = [];
 
@@ -73,20 +74,30 @@ const Brands = () => {
     ]
     return (
         <>
-            {companies?.map((item, index) => (
-                <div className="col-lg-5" key={index} ref={addtoRefs}>
-                    <div className="companies__container">
-                        <a href={item.url} target="/_blank">
-                            <div className="companies__logo">
-                                <img src={item.logo} alt={item.alt} />
-                            </div>
-                            <div className="companies__text" >
-                                <p>{item.text}</p>
-                            </div>
-                        </a>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-12">
+                        <Title titleOuter={'Our'} titleInner={'Companies'} />
+                        <div className="companies__message">
+                            <p>{description}</p>
+                        </div>
                     </div>
+                    {companies?.map((item, index) => (
+                        <div className="col-lg-5" key={index} ref={addtoRefs}>
+                            <div className="companies__container">
+                                <a href={item.url} target="/_blank">
+                                    <div className="companies__logo">
+                                        <img src={item.logo} alt={item.alt} />
+                                    </div>
+                                    <div className="companies__text">
+                                        <p>{item.text}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            ))}
+            </div>
         </>
     )
 }

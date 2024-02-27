@@ -2,7 +2,6 @@ import Hero from "../Hero/Hero";
 import About from "../About/About";
 import Slogan from "../Slogan/Slogan";
 import HelmetComponent from "../HelmetComponent";
-import Title from "../Title/Title";
 import Brands from "../Brands/Brands";
 
 const Home = () => {
@@ -24,11 +23,13 @@ const Home = () => {
             <Hero />
             <Slogan />
             <div className="container brands text-center mb-4">
-                <div className="row justify-content-center ">
-                    <div className="col-lg-12">
-                        <Title titleOuter={'Our'} titleInner={'Companies'} />
+
+                <div className="row">
+                    <div className="col-12">
+                        <div className="brands__inner bg-white py-5 rounded">
+                            <Brands />
+                        </div>
                     </div>
-                    <Brands />
                 </div>
             </div>
             <About />
