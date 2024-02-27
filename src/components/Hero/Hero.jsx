@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="container">
             <div className="row">
                 <div className="col-lg-12">
-                    <div className="home__hero">
+                    <div className="home__hero rounded overflow-hidden">
                         <Banner />
                         {/* <Swiper
                             spaceBetween={30}

@@ -13,11 +13,28 @@
         p {
             font-size: 1.1rem;
             margin: 10px 0;
+            display: flex;
+            align-items: flex-start;
             span {
                 font-size: 1.05rem;
             }
             svg {
                 margin-right: 8px;
+                line-height: 1.5;
+            }
+        }
+        &--list {
+            li {
+                display: flex;
+                align-items: flex-start;
+                svg {
+                    margin-right: 0.5rem;
+                    height: 1.5rem;
+                }
+                span {
+                    line-height: 1.5rem;
+                    display: block;
+                }
             }
         }
     }

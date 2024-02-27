@@ -24,12 +24,13 @@ const AboutPage = () => {
                 twitterImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1706095346/logos/b1z8dxf7cvrkqugkr5io.png"
             />
             <section className="aboutPage">
-                <Banner />
 
                 <div className="container py-5">
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="aboutPage__content">
+                            <Banner />
+
+                            <div className="aboutPage__content mt-4">
                                 <Title titleOuter={'Corporate'} titleInner={'Profile'} />
                                 <div className="aboutPage__message">
                                     <p>{aboutBadge}</p>

@@ -13,7 +13,7 @@ const Slogan = () => {
         ref.current.forEach((el) => {
             gsap.fromTo(el, { autoAlpha: 0 }, {
                 autoAlpha: 1, left: 0,
-                duration: 0.5, scrollTrigger: {
+                duration: .5, scrollTrigger: {
                     trigger: el,
                     start: "top bottom-=100",
                     toggleActions: "play none none reverse"
@@ -57,10 +57,10 @@ const Slogan = () => {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="slogan__inner">
-                            <h2 className="slogan__title">{sloganTitle}</h2>
+                            <h2 className="slogan__title" ref={addtoRefs}>{sloganTitle}</h2>
                             <div className="lineDot"></div>
                             {slogans.map((item) => (
-                                <div key={item.id} className='slogan__single'>
+                                <div key={item.id} className='slogan__single' ref={addtoRefs}>
                                     <div className="slogan__item">
                                         <h4>{item.title}</h4>
                                         <p>{item.des}</p>

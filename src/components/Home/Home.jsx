@@ -4,7 +4,7 @@ import Slogan from "../Slogan/Slogan";
 
 const Home = () => {
     return (
-        <section className="home">
+        <section className="home py-5">
             <Hero />
             <Slogan />
             <About />

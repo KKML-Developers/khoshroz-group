@@ -9,21 +9,15 @@ const Footer = () => {
                     <div className="col-md-4">
                         <div className="footer__content">
                             <h4>Corporate Office</h4>
-                            <ul className="contact">
+                            <ul className="footer__content--list">
                                 <li>
-                                    <p>
-                                        <FaMapMarkerAlt /> <span>Eunoos Trade Center-Level 8,<br />52,53 Dilkusha, Dilkusha C/A, Dhaka-1000</span>
-                                    </p>
+                                    <FaMapMarkerAlt /> <span>Eunoos Trade Center-Level 8,<br />52,53 Dilkusha, Dilkusha C/A, Dhaka-1000</span>
                                 </li>
                                 <li>
-                                    <p>
-                                        <FaPhone /> <span>+88 02 47121760</span>
-                                    </p>
+                                    <FaPhone /> <span>+88 02 47121760</span>
                                 </li>
                                 <li>
-                                    <p>
-                                        <FaEnvelope /> <span>ndcl.kkml@gmail.com</span>
-                                    </p>
+                                    <FaEnvelope /> <span>ndcl.kkml@gmail.com</span>
                                 </li>
                             </ul>
                         </div>
