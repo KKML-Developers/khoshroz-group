@@ -48,7 +48,7 @@ const Slogan = () => {
         {
             id: 4,
             title: 'Sustainably driven',
-            des: 'We are a force in the drive towards a more sustainable fashion industry'
+            des: 'We are a force in the drive towards a more sustainable Multi industry'
         },
     ]
     return (
