@@ -27,13 +27,21 @@
             li {
                 display: flex;
                 align-items: flex-start;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
                 svg {
                     margin-right: 0.5rem;
-                    height: 1.5rem;
+                    font-size: 1.1rem;
+                    margin-top: 3px;
+                    min-width: 1rem;
                 }
-                span {
+                span,
+                a {
                     line-height: 1.5rem;
                     display: block;
+                    text-decoration: none;
+                    color: lighten($color: $primary, $amount: 63);
                 }
             }
         }
@@ -50,8 +58,10 @@
             margin-left: 15px;
             a {
                 font-size: 1.6rem;
+                color: lighten($color: $primary, $amount: 63);
+
                 svg {
-                    color: aliceblue;
+                    color: lighten($color: $primary, $amount: 63);
                 }
             }
         }

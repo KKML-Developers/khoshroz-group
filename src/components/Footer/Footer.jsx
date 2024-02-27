@@ -1,4 +1,4 @@
-import { FaEnvelope, FaFacebookSquare, FaLinkedinIn, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaFacebookSquare, FaLinkedinIn, FaMapMarkerAlt, FaMobileAlt } from "react-icons/fa";
 import "./footer.scss";
 
 const Footer = () => {
@@ -10,14 +10,15 @@ const Footer = () => {
                         <div className="footer__content">
                             <h4>Corporate Office</h4>
                             <ul className="footer__content--list">
+
                                 <li>
-                                    <FaMapMarkerAlt /> <span>Eunoos Trade Center-Level 8,<br />52,53 Dilkusha, Dilkusha C/A, Dhaka-1000</span>
+                                    <FaMapMarkerAlt /> <span>Eunoos Trade Center-Level 8, 52,53 Dilkusha, Dilkusha C/A, Dhaka-1000</span>
                                 </li>
                                 <li>
-                                    <FaPhone /> <span>+88 02 47121760</span>
+                                    <FaMobileAlt /> <a href="tel:+880247121760" target="/_top">+88 02 47121760</a>
                                 </li>
                                 <li>
-                                    <FaEnvelope /> <span>ndcl.kkml@gmail.com</span>
+                                    <FaEnvelope /> <a href="mailto:ndcl.kkml@gmail.com" target="/_top">ndcl.kkml@gmail.com</a>
                                 </li>
                             </ul>
                         </div>
@@ -25,21 +26,15 @@ const Footer = () => {
                     <div className="col-md-4">
                         <div className="footer__content">
                             <h4>Factory Office</h4>
-                            <ul className="contact">
+                            <ul className="footer__content--list">
                                 <li>
-                                    <p>
-                                        <FaMapMarkerAlt /> <span>Krishnapur Bogiya, Magura Sadar, Magura</span>
-                                    </p>
+                                    <FaMapMarkerAlt /> <span>Krishnapur Bogiya, Magura Sadar, Magura</span>
                                 </li>
                                 <li>
-                                    <p>
-                                        <FaPhone /> <span>+88 01324-711333</span>
-                                    </p>
+                                    <FaMobileAlt /> <a href="tel:+8801324711333" target="/_top">+88 01324-711333</a>
                                 </li>
                                 <li>
-                                    <p>
-                                        <FaEnvelope /> <span>ndcl.kkml@gmail.com</span>
-                                    </p>
+                                    <FaEnvelope /> <a href="mailto:ndcl.kkml@gmail.com" target="/_top">ndcl.kkml@gmail.com</a>
                                 </li>
                             </ul>
                         </div>
@@ -47,21 +42,15 @@ const Footer = () => {
                     <div className="col-md-4">
                         <div className="footer__content">
                             <h4>Register Office</h4>
-                            <ul className="contact">
+                            <ul className="footer__content--list">
                                 <li>
-                                    <p>
-                                        <FaMapMarkerAlt /> <span>16/17 p. K Roy Road, Banglabazar Dhaka-1100</span>
-                                    </p>
+                                    <FaMapMarkerAlt /> <span>16/17 p. K Roy Road, Banglabazar Dhaka-1100</span>
                                 </li>
                                 <li>
-                                    <p>
-                                        <FaPhone /> <span>+88 01324-711307</span>
-                                    </p>
+                                    <FaMobileAlt /> <a href="tel:+8801324711307" target="/_top">+88 01324-711307</a>
                                 </li>
                                 <li>
-                                    <p>
-                                        <FaEnvelope /> <span>ndcl.kkml@gmail.com</span>
-                                    </p>
+                                    <FaEnvelope /> <a href="mailto:ndcl.kkml@gmail.com" target="/_top">ndcl.kkml@gmail.com</a>
                                 </li>
                             </ul>
                         </div>
@@ -72,7 +61,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 copyright-text">
-                            Khoshroz Group © 2024 / All Rights Reserved.
+                            <p className="m-0">Khoshroz Group &copy; 2024 / All Rights Reserved.</p>
                         </div>
                         <div className="col-md-6 social-links-wrap">
                             <ul className="social-links">
