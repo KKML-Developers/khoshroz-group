@@ -17,7 +17,7 @@ const About = () => {
                 {description.map((item, index) => (
                   <p key={index}>{item}</p>
                 ))}
-                <NavLink to="/about" className="primary__btn mt-3">
+                <NavLink to="/profile" className="primary__btn mt-3">
                   Read More
                 </NavLink>
               </div>

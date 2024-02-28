@@ -36,7 +36,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/speech" element={<Speech />} />
                 <Route path="/companies" element={<Companies />} />
-                <Route path="/about" element={<AboutPage />} />
+                <Route path="/profile" element={<AboutPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

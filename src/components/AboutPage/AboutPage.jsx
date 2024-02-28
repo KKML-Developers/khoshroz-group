@@ -11,7 +11,7 @@ const AboutPage = () => {
     return (
         <>
             <HelmetComponent
-                title="About | Khoshroz Group"
+                title="Company Profile | Khoshroz Group"
                 description="Description of your page goes here"
                 keywords="Khoshroz, Khoshroz Group, Publication, Bangladesh Business, Business Tycoon"
                 author="Khoshroz Group Developers"
