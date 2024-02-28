@@ -25,7 +25,7 @@ const About = () => {
           </div>
           <div className="col-lg-6">
             <div className="about__video h-100">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-qoaQgZF0E8?si=zrTxeF8IT7R3QXRl" title="YouTube video player" border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-qoaQgZF0E8?si=zrTxeF8IT7R3QXRl" title="YouTube video player" border="0" allowFullScreen></iframe>
             </div>
           </div>
         </div>
