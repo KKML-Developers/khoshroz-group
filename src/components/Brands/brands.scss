@@ -13,6 +13,7 @@
         border-radius: 5px;
         overflow: hidden;
         border: 1px solid $secondary;
+        z-index: 1;
         &::before {
             @extend %before_after;
             top: 0;
