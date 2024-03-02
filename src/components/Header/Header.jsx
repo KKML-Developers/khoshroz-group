@@ -13,6 +13,7 @@ const Header = () => {
   const headerData = [
     { id: 1, label: "Home", to: "/", exact: true },
     { id: 2, label: "Corporate Profile", to: "/profile", exact: true },
+    { id: 2, label: "Our Products", to: "/products", exact: true },
     { id: 3, label: "Chairman Speech", to: "/speech", exact: true },
     { id: 4, label: "Companies", to: "/companies", exact: true },
   ];
