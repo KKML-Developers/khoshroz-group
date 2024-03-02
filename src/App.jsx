@@ -12,6 +12,7 @@ const Home = lazy(() => import('./components/Home/Home'));
 const Companies = lazy(() => import('./components/Companies/Companies'));
 const Speech = lazy(() => import('./components/Speech/Speech'));
 const AboutPage = lazy(() => import('./components/AboutPage/AboutPage'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
 const Products = lazy(() => import('./components/Products/Products'));
 
 function ScrollToTop() {
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/speech" element={<Speech />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/companies" element={<Companies />} />
+                {/* <Route path="/contact" element={<Contact />} /> */}
                 <Route path="/profile" element={<AboutPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

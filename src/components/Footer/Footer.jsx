@@ -1,5 +1,6 @@
 import { FaEnvelope, FaFacebookSquare, FaLinkedinIn, FaMapMarkerAlt, FaMobileAlt } from "react-icons/fa";
 import "./footer.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -66,12 +67,10 @@ const Footer = () => {
                         <div className="col-md-6 social-links-wrap col-3">
                             <ul className="social-links">
                                 <li>
-                                    <a target="/_blank" title="Facebook" href="https://www.facebook.com/KhoshrozCorporateOffice/"> <FaFacebookSquare />
-                                    </a>
+                                    <Link to={'career'}>Career</Link>
                                 </li>
                                 <li>
-                                    <a target="/_blank" title="Linkedin" href="https://www.linkedin.com/company/khoshroz-kitab-mahal/"> <FaLinkedinIn />
-                                    </a>
+                                    <Link to={'contact'}>Contact</Link>
                                 </li>
                             </ul>
                         </div>
