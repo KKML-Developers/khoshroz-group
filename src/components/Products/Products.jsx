@@ -2,8 +2,40 @@ import Banner from '../Banner/Banner';
 import './products.scss';
 import HelmetComponent from '../HelmetComponent';
 const Companies = () => {
+    const productMessage = ["The expansion and diversification have indeed opened new opportunities for the Khoshroz Group, with the management focusing on providing a range of benevolent services beyond mere profit-making. The rising Khoshroz Group adheres to the principle of conducting business operations for the betterment of society. Through years of dedication and hard work, the Khoshroz Group has evolved into a multi-faceted entity, covering essential sectors such as food, clothing, housing, education, and healthcare.", "The Khoshroz Group has been instrumental in enhancing the lifestyle of the Bangladeshi people. Each subsidiary of the Khoshroz Group plays a significant role in the economic development of the country, by establishing industries, plants, and engaging in various activities across multiple sectors.", "The Khoshroz Group is dedicated to shaping the future of the nation. The various concerns under the Khoshroz Group are as follows:"]
 
-
+    const productList = [
+        {
+            image: 'https://res.cloudinary.com/dfaw271y6/image/upload/v1705831179/cld-sample-5.jpg',
+            url: 'https://khoshrozltd.com/',
+            title: 'Khoshroz Kitab Mahal'
+        },
+        {
+            image: 'https://res.cloudinary.com/dfaw271y6/image/upload/v1705831150/samples/food/fish-vegetables.jpg',
+            url: 'https://www.ndcautobrick.com/',
+            title: 'National Development Company'
+        },
+        {
+            image: 'https://res.cloudinary.com/dfaw271y6/image/upload/v1705831178/cld-sample-2.jpg',
+            url: 'https://www.jatiyamudran.com/',
+            title: 'Jatiyo Mudran & Packaging Limited'
+        },
+        {
+            image: 'https://res.cloudinary.com/dfaw271y6/image/upload/v1705831175/samples/dessert-on-a-plate.jpg',
+            url: 'https://maguraagriculture.com/',
+            title: 'Magura Agriculture Park Limited'
+        },
+        {
+            image: 'https://res.cloudinary.com/dfaw271y6/image/upload/v1705831172/samples/breakfast.jpg',
+            url: 'https://www.estylzefashion.com/',
+            title: 'Estylze Fashion Limited'
+        },
+        {
+            image: 'https://res.cloudinary.com/dfaw271y6/image/upload/v1705831154/samples/animals/three-dogs.jpg',
+            url: 'https://www.dreaminternationallimited.com/',
+            title: 'Dream International Limited'
+        },
+    ]
     return (
         <section className="products">
             <HelmetComponent
@@ -28,10 +60,22 @@ const Companies = () => {
                             </div>
                         </div>
 
+                        {productList.map((item, index) => (
+                            <div className="col-xl-4 col-md-6" key={index}>
+                                <a href={item.url} target='/_blank' className='d-block'>
+                                    <figure className='figure rounded' title={item.title} >
+                                        <img src={item.image} alt={item.title} className='figure-img img-fluid ' />
+                                        <figcaption className='text-center'>
+                                            {item.title}
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

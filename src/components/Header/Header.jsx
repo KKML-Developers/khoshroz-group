@@ -11,11 +11,11 @@ const Header = () => {
   const handleClick = () => setClick(!click);
 
   const headerData = [
-    { id: 1, label: "Home", to: "/", exact: true },
-    { id: 2, label: "Corporate Profile", to: "/profile", exact: true },
-    { id: 2, label: "Our Products", to: "/products", exact: true },
-    { id: 3, label: "Chairman Speech", to: "/speech", exact: true },
-    { id: 4, label: "Companies", to: "/companies", exact: true },
+    { label: "Home", to: "/", exact: true },
+    { label: "Corporate Profile", to: "/profile", exact: true },
+    { label: "Our Products", to: "/products", exact: true },
+    { label: "Chairman Speech", to: "/speech", exact: true },
+    { label: "Companies", to: "/companies", exact: true },
   ];
 
   useEffect(() => {
@@ -62,8 +62,8 @@ const Header = () => {
               </div>
               <div className={click ? "collapse navbar-collapse show" : "collapse navbar-collapse"}>
                 <ul className="navbar-nav">
-                  {headerData.map((item) => (
-                    <li className="nav-item" key={item.id}>
+                  {headerData.map((item, index) => (
+                    <li className="nav-item" key={index}>
                       <NavLink to={item.to} className="nav-links" onClick={handleClick}>
                         {item.label}
                       </NavLink>
