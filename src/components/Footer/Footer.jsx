@@ -1,4 +1,4 @@
-import { FaEnvelope, FaFacebookSquare, FaLinkedinIn, FaMapMarkerAlt, FaMobileAlt } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaMobileAlt } from "react-icons/fa";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 

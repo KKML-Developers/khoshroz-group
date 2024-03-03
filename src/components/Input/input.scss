@@ -1,0 +1,16 @@
+@import "../../assets/scss/variables";
+label {
+    font-size: 0.9rem;
+    color: $primaryText;
+    opacity: 0.8;
+}
+.form-control {
+    border-color: rgba($color: $primary, $alpha: 0.4);
+    &:focus {
+        border-color: $secondary;
+        box-shadow: 0 0 0 0.25rem rgba($color: $secondary, $alpha: 0.2);
+    }
+    &::placeholder {
+        opacity: 0.3;
+    }
+}

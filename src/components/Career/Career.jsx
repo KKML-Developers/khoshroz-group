@@ -9,9 +9,9 @@ import emailjs from '@emailjs/browser';
 
 import bannerMobile from '../../assets/img/cover_mobile.jpg'
 
-import './contact.scss'
+import './career.scss'
 import Input from '../Input/Input';
-const Contact = () => {
+const Career = () => {
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
@@ -49,6 +49,7 @@ const Contact = () => {
                         theme: "light",
                         transition: Bounce,
                     });
+                    error.text
                 },
             );
     };
@@ -74,17 +75,19 @@ const Contact = () => {
                             <Banner />
                         </div>
                         <div className="text-center">
-                            <Title titleOuter={'Contact'} titleInner={'Us'} />
+                            <Title titleOuter={'Career at'} titleInner={'Khoshroz'} />
                         </div>
                         <div className="contact__form d-flex align-content-stretch my-4">
                             <div className="contact__form--left">
                                 <img src={bannerMobile} alt="" className="img-fluid h-100 object-cover" />
                             </div>
                             <div className="contact__form--right  p-4">
-                                <form ref={form} onSubmit={sendEmail}>
-                                    <Input label={'Name'} placeholder={'Your Full Name'} name={'name'} type={'text'} />
-                                    <Input label={'Email'} placeholder={'yourmail@mail.com'} name={'email'} type={'email'} />
+                                <form ref={form} onSubmit={sendEmail} method="post">
+                                    <Input label={'Name'} placeholder={'Your Full Name'} name={'user_name'} type={'text'} />
+                                    <Input label={'Email'} placeholder={'yourmail@mail.com'} name={'from_name'} type={'email'} />
                                     <Input label={'Subject'} placeholder={'Subject'} name={'subject'} type={'text'} />
+                                    <Input label={'Resume URL'} placeholder={'your resume URL..'} pattern={'https://.*'} name={'url'} type={'url'} />
+
                                     <div className="form-group">
                                         <label>Message</label>
                                         <textarea className="form-control" name="message" placeholder="Write your message here..." required />
@@ -100,4 +103,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Career;
