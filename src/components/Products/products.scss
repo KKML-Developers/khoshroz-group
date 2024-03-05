@@ -1,0 +1,39 @@
+@import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
+.products {
+    &__description {
+        &::first-letter {
+            initial-letter: 3;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
+    figure {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 20rem;
+            margin-bottom: 0;
+            object-fit: cover;
+            transition: all 0.3s ease-in-out;
+        }
+        figcaption {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            font-size: $paragraph-text;
+            padding: 0.7rem 0;
+            display: block;
+            line-height: 1;
+            background-color: rgba($color: $primary, $alpha: 0.9);
+            color: #fff;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

@@ -1,15 +1,30 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
-import HelmetComponent from './components/HelmetComponent'; // Import the HelmetComponent
+import Loading from './components/Loading/Loading';
+import HelmetComponent from './components/HelmetComponent';
 
 const Home = lazy(() => import('./components/Home/Home'));
 const Companies = lazy(() => import('./components/Companies/Companies'));
-const About = lazy(() => import('./components/About/About'));
+const Speech = lazy(() => import('./components/Speech/Speech'));
+const AboutPage = lazy(() => import('./components/AboutPage/AboutPage'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
+const Career = lazy(() => import('./components/Career/Career'));
+const Products = lazy(() => import('./components/Products/Products'));
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
@@ -18,11 +33,16 @@ function App() {
         <Router>
           <Header />
           <main>
-            <Suspense fallback={<div>Loading...</div>}>
+            <ScrollToTop />
+            <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/speech" element={<Speech />} />
+                <Route path="/products" element={<Products />} />
                 <Route path="/companies" element={<Companies />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/career" element={<Career />} />
+                <Route path="/profile" element={<AboutPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
@@ -30,17 +50,17 @@ function App() {
           <Footer />
         </Router>
         <HelmetComponent
-          title="Your Page Title"
+          title="Khoshroz Group of Company"
           description="Description of your page goes here"
-          keywords="your, keywords, here"
-          author="Your Name"
-          ogTitle="Your Page Title"
+          keywords="Khoshroz, Khoshroz Group, Publication, Bangladesh Business, Business Tycoon"
+          author="Khoshroz Group Developers"
+          ogTitle="Khoshroz Group of Company"
           ogDescription="Description of your page goes here"
-          ogUrl="https://www.yourwebsite.com"
-          ogImage="https://www.yourwebsite.com/your-image.jpg"
-          twitterTitle="Your Page Title"
+          ogUrl="https://www.khoshrozltd.com"
+          ogImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1706095346/logos/b1z8dxf7cvrkqugkr5io.png"
+          twitterTitle="Khoshroz Group of Company"
           twitterDescription="Description of your page goes here"
-          twitterImage="https://www.yourwebsite.com/your-image.jpg"
+          twitterImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1706095346/logos/b1z8dxf7cvrkqugkr5io.png"
         />
       </>
     </HelmetProvider>

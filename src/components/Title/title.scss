@@ -1,0 +1,10 @@
+@import "../../assets/scss/variables";
+
+.section__title {
+    font-weight: 700;
+    margin-bottom: 20px;
+    span {
+        color: $secondary;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,60 @@
+@import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
+
+.brands {
+    .row {
+        row-gap: 1.5rem;
+    }
+}
+.companies {
+    &__container {
+        position: relative;
+        padding: 5px 10px;
+        background-color: rgba($color: $secondary, $alpha: 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid $secondary;
+        z-index: 1;
+        &::before {
+            @extend %before_after;
+            top: 0;
+            right: 0;
+            background-color: rgba($color: $secondary, $alpha: 0.12);
+            height: 100%;
+            width: 0;
+            transition: all 0.3s cubic-bezier(0, 0.23, 0.71, 0.94);
+            z-index: -1;
+        }
+        &:hover {
+            &::before {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
+        a {
+            line-height: 1;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__logo {
+        width: 100px;
+        height: 100px;
+        margin-right: 0.5rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: left;
+        }
+    }
+    &__text {
+        @extend %descriptionCommon;
+        text-align: left;
+        color: $primaryText;
+        p {
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    }
+}

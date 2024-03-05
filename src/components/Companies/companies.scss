@@ -1,0 +1,13 @@
+@import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
+.companies {
+    .row {
+        row-gap: 1.5rem;
+    }
+    &__content {
+        text-align: center;
+    }
+    &__message {
+        text-align: left;
+        @extend %descriptionCommon;
+    }
+}

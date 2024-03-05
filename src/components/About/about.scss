@@ -1,0 +1,60 @@
+@import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
+
+.about {
+    position: relative;
+    z-index: 1;
+    // &::before {
+    //     @extend %before_after;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url("../../assets/img/grandient_bg.svg");
+    //     background-repeat: repeat;
+    //     background-size: cover;
+    //     z-index: -1;
+    //     opacity: 0.4;
+    // }
+    @include mobile {
+        padding: 40px 0;
+    }
+    &__content {
+        h2 {
+            font-size: $title-heading;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: $primaryText;
+        }
+        &--desc {
+            p {
+                font-size: $paragraph-text;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    // &__img {
+    //     img {
+    //         width: 100%;
+    //     }
+    // }
+    &__video {
+        border: 2px solid $secondary;
+        box-shadow: 0 0 5px 0 rgba($color: $secondary, $alpha: 0.5);
+        overflow: hidden;
+        @include small-desktop {
+            margin-bottom: 20px;
+            border: 0;
+            box-shadow: none;
+        }
+        iframe {
+            @include small-desktop {
+                min-height: 400px;
+            }
+            @include mobile {
+                min-height: 300px;
+            }
+        }
+    }
+}

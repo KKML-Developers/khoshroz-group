@@ -1,0 +1,27 @@
+@import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
+.aboutPage {
+    &__content {
+        color: $primaryText;
+        text-align: center;
+    }
+
+    &__message {
+        padding: 15px;
+        border: 1px solid $secondary;
+        background-color: rgba($color: $secondary, $alpha: 0.2);
+        text-align: left;
+        margin-bottom: 20px;
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+    }
+    &__desc {
+        text-align: left;
+
+        &::first-letter {
+            initial-letter: 3;
+        }
+        @extend %descriptionCommon;
+    }
+}

@@ -4,20 +4,48 @@
     background-color: $primaryText;
     color: lighten($color: $primary, $amount: 63);
 
-    &-content {
+    &__content {
+        @include tablet {
+            margin-bottom: 1.5rem;
+        }
         h4 {
-            font-size: 2.3rem;
+            font-size: $sub-title-heading;
             font-weight: 700;
-            margin: 10px 0;
+            margin-bottom: 1rem;
         }
         p {
             font-size: 1.1rem;
             margin: 10px 0;
+            display: flex;
+            align-items: flex-start;
             span {
                 font-size: 1.05rem;
             }
             svg {
                 margin-right: 8px;
+                line-height: 1.5;
+            }
+        }
+        &--list {
+            li {
+                display: flex;
+                align-items: flex-start;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+                svg {
+                    margin-right: 0.5rem;
+                    font-size: 1.1rem;
+                    margin-top: 3px;
+                    min-width: 1rem;
+                }
+                span,
+                a {
+                    line-height: 1.5rem;
+                    display: block;
+                    text-decoration: none;
+                    color: lighten($color: $primary, $amount: 63);
+                }
             }
         }
     }
@@ -32,9 +60,11 @@
         li {
             margin-left: 15px;
             a {
-                font-size: 1.6rem;
+                font-size: $paragraph-text;
+                color: lighten($color: $primary, $amount: 63);
+
                 svg {
-                    color: aliceblue;
+                    color: lighten($color: $primary, $amount: 63);
                 }
             }
         }

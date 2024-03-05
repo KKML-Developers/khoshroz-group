@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import { Helmet } from 'react-helmet-async';
 
 const HelmetComponent = ({ title, description, keywords, author, ogTitle, ogDescription, ogUrl, ogImage, twitterTitle, twitterDescription, twitterImage }) => {

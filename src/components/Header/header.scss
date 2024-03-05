@@ -1,13 +1,22 @@
 @import "../../assets/scss/variables", "../../assets/scss/reset", "../../assets/scss/common", "../../assets/scss/mixins";
 .header {
-    background-color: lighten($color: $primary, $amount: 63);
+    // background-color: lighten($color: $primary, $amount: 63);
+    background-color: #fff;
+    transition: 0.3s;
+    top: -20px;
+    &.sticky {
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: 0.2);
+        z-index: 999;
+    }
     .navbar {
         @include flex(row, space-between, center);
         @include tablet {
             display: block;
         }
         &-brand {
-            width: 220px;
+            width: 175px;
         }
         &-collapse {
             flex-grow: inherit;
@@ -17,7 +26,7 @@
                 &:not(:last-child) {
                     margin-right: 1rem;
                     @include tablet {
-                        border-bottom: 1px solid $primaryText;
+                        border-bottom: 1px solid rgba($color: $primary, $alpha: 0.1);
                     }
                 }
                 a {
@@ -46,6 +55,15 @@
                         }
                     }
                     &:hover {
+                        color: $secondary;
+                        &::before {
+                            width: 80%;
+                            @include tablet {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &.active {
                         color: $secondary;
                         &::before {
                             width: 80%;

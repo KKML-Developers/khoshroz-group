@@ -1,7 +1,46 @@
+@import "./mixins";
 %before_after {
     position: absolute;
     content: "";
 }
-%some {
-    justify-content: center;
+
+.primary__btn {
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 0;
+    background-color: $primary;
+    padding: 15px 35px;
+    line-height: 1;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    @include mobile {
+        font-size: 1.2rem;
+    }
+    &::before {
+        @extend %before_after;
+        left: 0;
+        top: 0;
+        background-color: darken($color: $primary, $amount: 5);
+        width: 0;
+        height: 100%;
+        transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+        z-index: -1;
+    }
+    &:hover {
+        &::before {
+            right: 0;
+            left: auto;
+            width: 100%;
+        }
+    }
+}
+
+%descriptionCommon {
+    p {
+        font-size: 1.4rem;
+    }
 }
