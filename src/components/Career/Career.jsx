@@ -1,102 +1,80 @@
-import { useRef } from 'react';
-
-import { ToastContainer, toast, Bounce } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 import Banner from "../Banner/Banner"
 import Title from "../Title/Title"
-import emailjs from '@emailjs/browser';
-
-import bannerMobile from '../../assets/img/cover_mobile.jpg'
-
 import './career.scss'
-import Input from '../Input/Input';
-const Career = () => {
-    const form = useRef();
-    const sendEmail = (e) => {
-        e.preventDefault();
+import JobCard from '../JobCard/JobCard';
+import HireandBenefits from "../HireandBenefits/HireandBenefits";
 
-        emailjs
-            .sendForm('service_va96in8', 'template_h3hkf5f', form.current, {
-                publicKey: 'n1EN5ySRdSSRcAn6v',
-            })
-            .then(
-                () => {
-                    form.current.reset();
-                    toast.success('Message sent successfully', {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                        pauseOnFocusLoss: true,
-                        transition: Bounce,
-                    });
-                },
-                // eslint-disable-next-line no-unused-vars
-                (error) => {
-                    toast.error('Something went wrong, Please check again', {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                        transition: Bounce,
-                    });
-                    error.text
-                },
-            );
-    };
+
+const Career = () => {
+
+    const jobList = [
+        {
+            title: 'Software Engineer',
+            type: 'Full-time',
+            role: 'Backend Developer',
+            description: {
+                general: 'Develop and maintain server-side logic, definition, and maintenance of the central database, and ensuring high performance and responsiveness to requests from the front-end.',
+                about: 'Join our dynamic team of software engineers working on cutting-edge technologies. We value innovation and collaboration.',
+                responsibility: 'Design, implement, and maintain scalable and reliable backend systems. Collaborate with cross-functional teams to define, design, and ship new features.',
+            },
+            applyButton: 'Apply Now',
+        },
+        {
+            title: 'Graphic Designer',
+            type: 'Part-time',
+            role: 'Visual Designer',
+            description: {
+                general: 'Create visual concepts to communicate ideas that inspire, inform, and captivate consumers. Develop the overall layout and production design for various applications such as advertisements, brochures, magazines, and corporate reports.',
+                about: 'Join our creative design team and contribute to visually appealing and effective design solutions. We encourage artistic expression and originality.',
+                responsibility: 'Create and design graphics for various projects. Collaborate with clients and team members to understand project requirements and deliver high-quality designs.',
+            },
+            applyButton: 'Apply Now',
+        },
+        {
+            title: 'Marketing Specialist',
+            type: 'Contract',
+            role: 'Digital Marketing',
+            description: {
+                general: 'Plan and execute marketing campaigns, analyze market trends and competitors, and collaborate with cross-functional teams to create engaging content for online platforms.',
+                about: 'Join our marketing team and contribute to the growth and success of our brand. We value creativity and strategic thinking in digital marketing.',
+                responsibility: 'Develop and execute digital marketing strategies. Create and optimize content for online platforms, analyze data to measure campaign success, and stay updated on industry trends.',
+            },
+            applyButton: 'Apply Now',
+        },
+        {
+            title: 'Motion Graphic',
+            type: 'Contract',
+            role: 'Video Production',
+            description: {
+                general: 'Plan and execute marketing campaigns, analyze market trends and competitors, and collaborate with cross-functional teams to create engaging content for online platforms.',
+                about: 'Join our marketing team and contribute to the growth and success of our brand. We value creativity and strategic thinking in digital marketing.',
+                responsibility: 'Develop and execute digital marketing strategies. Create and optimize content for online platforms, analyze data to measure campaign success, and stay updated on industry trends.',
+            },
+            applyButton: 'Apply Now',
+        },
+        // Add more job objects as needed
+    ];
+
 
     return (
         <section className="contact">
-            <ToastContainer
-                position="top-center"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-            />
             <div className="container py-5">
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="mb-4">
                             <Banner />
                         </div>
+                        <div className="mb-4">
+                            <HireandBenefits />
+                        </div>
                         <div className="text-center">
                             <Title titleOuter={'Career at'} titleInner={'Khoshroz'} />
                         </div>
-                        <div className="contact__form d-flex align-content-stretch my-4">
-                            <div className="contact__form--left">
-                                <img src={bannerMobile} alt="" className="img-fluid h-100 object-cover" />
-                            </div>
-                            <div className="contact__form--right  p-4">
-                                <form ref={form} onSubmit={sendEmail} method="post">
-                                    <Input label={'Name'} placeholder={'Your Full Name'} name={'user_name'} type={'text'} />
-                                    <Input label={'Email'} placeholder={'yourmail@mail.com'} name={'from_name'} type={'email'} />
-                                    <Input label={'Subject'} placeholder={'Subject'} name={'subject'} type={'text'} />
-                                    <Input label={'Resume URL'} placeholder={'your resume URL..'} pattern={'https://.*'} name={'url'} type={'url'} />
-
-                                    <div className="form-group">
-                                        <label>Message</label>
-                                        <textarea className="form-control" name="message" placeholder="Write your message here..." required />
-                                    </div>
-                                    <button type="submit" value="Send" className="primary__btn mt-4">Send Message </button>
-                                </form>
-                            </div>
-                        </div>
                     </div>
+                    {jobList.map((job, index) => (
+                        <JobCard key={index} job={job} />
+                    ))}
                 </div>
             </div>
         </section>
