@@ -1,0 +1,24 @@
+@import "../../assets/scss/variables";
+.benefit {
+    margin-top: 1.5rem;
+    &__card {
+        height: 100%;
+        color: $primaryText;
+        h4 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+    }
+    &:nth-child(even) {
+        .benefit__card {
+            border: 1px solid $primary;
+            background-color: rgba($color: $primary, $alpha: 0.2);
+        }
+    }
+    &:nth-child(odd) {
+        .benefit__card {
+            border: 1px solid $secondary;
+            background-color: rgba($color: $secondary, $alpha: 0.2);
+        }
+    }
+}

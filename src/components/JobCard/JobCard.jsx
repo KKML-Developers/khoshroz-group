@@ -16,8 +16,8 @@ const JobCard = ({ job }) => {
 
 
     return (
-        <div className="col-lg-3 col-md-4 col-sm-6">
-            <div className="card text-center mb-3">
+        <div className="col-lg-3 col-md-4 col-sm-6 ">
+            <div className="card text-center">
                 <div className="card-body p-2 py-5">
                     <h5 className="card-title my-2">{job.title}</h5>
                     <p className="card-text my-2 job-type-color">{job.type}</p>

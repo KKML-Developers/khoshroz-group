@@ -82,7 +82,7 @@ const Contact = () => {
                             </div>
                             <div className="contact__form--right  p-4">
                                 <form ref={form} onSubmit={sendEmail}>
-                                    <Input label={'Name'} placeholder={'Your Full Name'} name={'name'} type={'text'} />
+                                    <Input label={'Name'} placeholder={'Your Full Name'} name={'from_name'} type={'text'} />
                                     <Input label={'Email'} placeholder={'yourmail@mail.com'} name={'email'} type={'email'} />
                                     <Input label={'Subject'} placeholder={'Subject'} name={'subject'} type={'text'} />
                                     <div className="form-group">
