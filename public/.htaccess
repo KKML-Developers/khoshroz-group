@@ -8,6 +8,19 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
 </IfModule>
 
+# Netlify specific rules
+# Rewrite rules for Netlify
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Set default handler for HTML and CSS files
 <FilesMatch "\.(html|css)$">
-  AddHandler default-handler
+  SetHandler default-handler
 </FilesMatch>
