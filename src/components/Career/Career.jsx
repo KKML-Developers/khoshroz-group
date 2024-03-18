@@ -3,7 +3,6 @@ import Banner from "../Banner/Banner"
 import Title from "../Title/Title"
 import './career.scss'
 import JobCard from '../JobCard/JobCard';
-import HireandBenefits from "../HireandBenefits/HireandBenefits";
 import Benefit from "../Benefit/Benefit";
 
 
