@@ -1,0 +1,32 @@
+on:
+    push:
+      branches:
+        - production
+  
+  name: 🚀 Deploy website to GitHub Pages
+  
+  jobs:
+    deploy:
+      name: 🎉 Deploy
+      runs-on: ubuntu-latest
+      steps:
+        - name: 🚚 Get latest code
+          uses: actions/checkout@v3
+  
+        - name: Use Node.js 20
+          uses: actions/setup-node@v2
+          with:
+            node-version: '20'
+  
+        - name: 🔨 Build Project
+          run: |
+            npm install
+            npm run build
+  
+        - name: 🌐 Deploy to GitHub Pages
+          uses: JamesIves/github-pages-deploy-action@4.1.2
+          with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: dist
+  
