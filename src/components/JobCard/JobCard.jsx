@@ -1,19 +1,9 @@
-import { useState } from "react";
 import './jobCard.scss';
+import useModal from "../../hooks/useModal";
 
 const JobCard = ({ job }) => {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const handleOpenModal = () => {
-        console.log(isModalOpen)
-        setIsModalOpen(true);
-    };
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    };
-
+    const { isModalOpen, isClosing, handleOpenModal, handleCloseModal } = useModal();
 
     return (
         <div className="col-lg-3 col-md-4 col-sm-6 ">
@@ -27,29 +17,34 @@ const JobCard = ({ job }) => {
 
                     {/* Modal */}
                     {isModalOpen && (
-                        <div className="modal">
+                        <>
+                            <div className="modal__overlay" onClick={handleCloseModal}></div>
                             {/* Modal content */}
-                            <div className="modal-content">
-                                <span className="close" onClick={handleCloseModal}>&times;</span>
-                                <h3 className="fw-bold">{job.title}</h3>
-                                <hr />
-                                <p><strong className="fw-semibold">Type:</strong> {job.type}</p>
-                                <p><strong className="fw-semibold">Role:</strong> {job.role}</p>
+                            <div className={`modal__content ${isClosing ? 'closing' : ''}`}>
+                                <div className="modal__header border-bottom d-flex align-items-center justify-content-between pb-3">
+                                    <h3 className="fw-bold">{job.title}</h3>
+                                    <button className="btn close" onClick={handleCloseModal}>&times;</button>
+                                </div>
+                                <div className="modal__body">
+                                    <p><strong className="fw-semibold">Type:</strong> {job.type}</p>
+                                    <p><strong className="fw-semibold">Role:</strong> {job.role}</p>
+
+                                </div>
                                 <div className="my-3">
                                     <h4 className="fw-bold my-2">About the Job</h4>
                                     <p><strong className="fw-semibold">About Company:</strong> {job.description.general}</p>
                                     <p><strong className="fw-semibold">Job Description:</strong> {job.description.about}</p>
                                     <p><strong className="fw-semibold">Job Responsibility:</strong> {job.description.responsibility}</p>
                                 </div>
-                                <a href="https://forms.gle/TfiahASTwBa4DxMfA" target="/_blank" className="primary__btn my-2" >Apply</a>
+                                <a href="https://forms.gle/TfiahASTwBa4DxMfA" target="_blank" className="primary__btn my-2" rel="noreferrer" >Apply</a>
 
                             </div>
-                        </div>
+                        </>
                     )}
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
-export default JobCard
+export default JobCard;
