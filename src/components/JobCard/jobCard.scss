@@ -1,4 +1,4 @@
-@import "../../assets/scss/variables";
+@import "../../assets/scss/variables", "../../assets/scss/common";
 
 // Styles for the card
 .card {
@@ -34,7 +34,6 @@
         top: 50%;
         left: 50%;
         width: 600px;
-        max-height: 80vh;
         height: auto;
         background-color: #fff;
         border-radius: 5px;
@@ -44,6 +43,7 @@
         animation: modalAnimate 0.3s ease-in-out;
         transform: translate(-50%, -50%);
         color: $primaryText;
+
         &.closing {
             animation: modalCloseAnimate 0.3s ease-in-out forwards;
         }
@@ -65,6 +65,49 @@
             &:hover {
                 background-color: $primary;
                 color: #fff;
+            }
+        }
+    }
+    &__body {
+        max-height: 60vh;
+        overflow: hidden;
+        overflow-y: auto;
+        h4 {
+            margin-bottom: 1rem;
+        }
+        .jd__single {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+            h5 {
+                margin-bottom: 0.5rem;
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+            ul {
+                li {
+                    list-style: none;
+                    font-size: 0.9rem;
+                    position: relative;
+                    padding-left: 1.2rem;
+                    position: relative;
+                    &:not(:last-child) {
+                        margin-bottom: 0.5rem;
+                    }
+                    &::before {
+                        @extend %before_after;
+                        top: 7px;
+                        left: 0;
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-radius: 50%;
+                        background-color: $primaryText;
+                        overflow: hidden;
+                    }
+                }
             }
         }
     }
